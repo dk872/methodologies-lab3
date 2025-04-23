@@ -10,7 +10,7 @@ COPY . .
 
 RUN go build -o fizzbuzz
 
-FROM scratch
+FROM gcr.io/distroless/base
 
 WORKDIR /app
 
@@ -20,4 +20,4 @@ COPY --from=builder /app/templates ./templates
 
 EXPOSE 8080
 
-CMD ["./fizzbuzz", "serve", "--port", "8080"]
+CMD ["/app/fizzbuzz", "serve", "--port", "8080"]
