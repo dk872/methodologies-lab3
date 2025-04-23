@@ -1,4 +1,4 @@
-FROM golang:1.22 AS builder
+FROM golang:alpine AS builder
 
 WORKDIR /app
 
@@ -15,6 +15,8 @@ FROM scratch
 WORKDIR /app
 
 COPY --from=builder /app/fizzbuzz .
+
+COPY --from=builder /app/templates ./templates
 
 EXPOSE 8080
 
