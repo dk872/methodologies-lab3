@@ -1,0 +1,16 @@
+{
+    "name": "users-cli",
+    "version": "1.0.0",
+    "description": "Console application for user management using MongoDB",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "dotenv": "10.0.0",
+        "mongoose": "8.13.2",
+        "readline-sync": "1.4.10"
+    },
+    "author": "Dmytro Kulyk",
+    "license": "ISC"
+}
